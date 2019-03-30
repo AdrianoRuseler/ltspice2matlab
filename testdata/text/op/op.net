@@ -1,0 +1,17 @@
+* F:\Dropbox\GitHub\ltspice2matlab\testdata\text\op\op.asc
+Q1 Uc1 Ue1 Ue12 0 BC546B
+Q2 Uc2 Ue2 Ue12 0 BC546B
+I1 Ue12 Vee 10m
+R1 Vcc Uc1 1k5
+R2 Vcc Uc2 1k5
+Vc Vcc 0 15
+Ve 0 Vee 15
+E1 Ue1 0 Ued 0 0.5
+E2 Ue2 0 0 Ued 0.5
+V1 Ued 0 SINE(0 10m 1k) AC 1
+.model NPN NPN
+.model PNP PNP
+.lib C:\Users\Adriano Ruseler\Documents\LTspiceXVII\lib\cmp\standard.bjt
+.op
+.backanno
+.end
